@@ -11,7 +11,7 @@
  *
  * Examples:
  * One-shot model:
- *  User: "Alexa, ask Rap Geek for a space fact"
+ *  User: "Alexa, ask Rap Geek for a rap fact"
  *  Alexa: "Here's your Rap fact: ..."
  */
 
@@ -103,7 +103,7 @@ Fact.prototype.intentHandlers = {
  * Gets a random new fact from the list and returns to the user.
  */
 function handleNewFactRequest(response) {
-    // Get a random rap fact from the space facts list
+    // Get a random rap fact from the rap facts list
     var factIndex = Math.floor(Math.random() * FACTS.length);
     var randomFact = FACTS[factIndex];
 
@@ -115,7 +115,7 @@ function handleNewFactRequest(response) {
 
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
-    // Create an instance of the SpaceGeek skill.
+    // Create an instance of the  RapGeek skill.
     var fact = new Fact();
     fact.execute(event, context);
 };
