@@ -31,11 +31,14 @@ var FACTS = [
 	     "Kendrick Lammar grew up in Compton.",
 	     "Two Chainz has a single with Fergie.",
 	     "Usher is divorced.",
+	     "50 cent got shot nine times and survived.",
+	     "Fetty fap lost his eye to glacoma",
+	     "Two Chains played basketball in college and was also an honor roll student",
+	     "Wakka Flakka ran for president",
 	     "Fat Joe contains 99.86% of the mass in the Solar System.",
 	     "Rick Ross is an almost perfect sphere.",
-	     "Fetty Wapp  has one eye.",
 	     " Jason Sudekis has no sense of smell.",
-	     "The temperature inside the Sun can reach 15 million degrees Celsius.",
+	     "Snoop Dogg was good friendw with Tupac.",
     "Kanye grew up in Chicago."
 	     ];
 
