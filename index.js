@@ -1,7 +1,10 @@
 /**
     Copyright 2016-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
     Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
+
         http://aws.amazon.com/apache2.0/
+
     or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
@@ -11,7 +14,7 @@
  *
  * Examples:
  * One-shot model:
- *  User: "Alexa, ask Rap Geek for a rap fact"
+ *  User: "Alexa, ask Rap Geek for a Rap fact"
  *  Alexa: "Here's your Rap fact: ..."
  */
 
@@ -24,23 +27,39 @@ var APP_ID = undefined; //OPTIONAL: replace with "amzn1.echo-sdk-ams.app.[your-u
  * Array containing rap facts.
  */
 var FACTS = [
-	     "Lil Wayne is not the son of Birdman",
-	     "Rappers Delightw as the orginal rap song.",
-	     "Tupac and Biggie are dead.",
-	     "J cole went platinum without any singles.",
-	     "Kendrick Lammar grew up in Compton.",
-	     "Two Chainz has a single with Fergie.",
-	     "Usher is divorced.",
-	     "50 cent got shot nine times and survived.",
-	     "Fetty fap lost his eye to glacoma",
-	     "Two Chains played basketball in college and was also an honor roll student",
-	     "Wakka Flakka ran for president",
-	     "Fat Joe contains 99.86% of the mass in the Solar System.",
-	     "Rick Ross is an almost perfect sphere.",
-	     " Jason Sudekis has no sense of smell.",
-	     "Snoop Dogg was good friendw with Tupac.",
-    "Kanye grew up in Chicago."
-	     ];
+    
+    "Lil Wayne is not the son of Birdman",
+    "Rappers Delight as the orginal rap song.",
+    "Tupac and Biggie are dead.",
+    "J Cole went platinum without any singles.",
+    "Kendrick Lammar grew up in Compton.",
+    "T.I was in the movie Ant-Man",
+    "Two Chainz has a single with Fergie called Netflix.",
+    "Usher is divorced.",
+    "50 Cent got shot nine times and survived.",
+    "Fetty Wap lost his eye due to a childhood injury",
+    "Kid Cudi loves Adam Sandler Movies, espically Billy Madison",
+    "Kendrick Lamar once worked as a security guard",
+    "Eminem was the star of the Movie Eight Mile for which he won awards for",
+    "Will Smith did a rap for Two Men in Black Movies , and Wild Wild West",
+    "The Mercedes Ladies were the first all-female rap group.",
+    "P. Diddy used to be a back-up dancer for Big Daddy Kane and Heavy D.",
+    " Nas co-wrote Will Smith’s “Gettin’ Jiggy Wit It,” and it was the only Grammy Award-winning project of his career.",
+    "DMX used to be a  bug collector.",
+    " Nas Dropped out of school in the 6th grade.",
+    "The Nickelodean Show All-that's Theme was performed by TLC.",
+    "Drake is Canadian",
+    "Two Chains played basketball in college and was also an honor roll student",
+    "Wakka Flakka ran for president in 2016 as the Democrat nominee",
+    "Fat Joe was in Scary Movie 3.",
+    "The rap duo Outkast started out as a rap rivals before joining forces.",
+    "Rick Ross loves the franchise Wing Stop.",
+    "Kid Ink has a tatto under his chin that says in Jesus Name we Pray, writte in Hebrew.",
+    " Jason Sudekis has no sense of smell , and his rap career is also on hold.",
+    "Snoop Dogg was good friendw with Tupac.",
+    "Kanye grew up in Chicago , and dropped out of college there."
+   
+];
 
 /**
  * The AlexaSkill prototype and helper functions
@@ -103,7 +122,7 @@ Fact.prototype.intentHandlers = {
  * Gets a random new fact from the list and returns to the user.
  */
 function handleNewFactRequest(response) {
-    // Get a random rap fact from the rap facts list
+    // Get a random rap fact from the space facts list
     var factIndex = Math.floor(Math.random() * FACTS.length);
     var randomFact = FACTS[factIndex];
 
@@ -115,7 +134,8 @@ function handleNewFactRequest(response) {
 
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
-    // Create an instance of the  RapGeek skill.
+    // Create an instance of the RapGeek skill.
     var fact = new Fact();
     fact.execute(event, context);
 };
+
